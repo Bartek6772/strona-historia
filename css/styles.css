@@ -1,0 +1,291 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f0f0f0;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  background-color: #cb372c;
+  width: 100%;
+  box-shadow: 0px 0px 10px #000;
+  z-index: 1000;
+}
+.nav > .container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.nav .links {
+  width: 30%;
+  float: right;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-header {
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+}
+.nav a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+}
+.nav a::after {
+  content: " ";
+  position: absolute;
+  background-color: #fff;
+  width: 0;
+  height: 4px;
+  left: 0;
+  bottom: -5px;
+  transition: all 0.25s;
+}
+.nav a.active::after, .nav a:hover::after {
+  width: 100%;
+}
+@media (max-width: 700px) {
+  .nav .links {
+    display: none;
+  }
+  .nav-header {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+main > header {
+  background-image: url("./../imgs/chrzest-polski-966.jpeg");
+  background-size: 100% auto;
+  background-attachment: fixed;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+main > header > div {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main > header p {
+  color: #dddddd;
+  font-size: 1.7rem;
+  margin-top: 20px;
+}
+main > header h1 {
+  color: #fff;
+  font-size: 4rem;
+  text-shadow: 0px 0px 5px #000;
+  text-transform: uppercase;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+}
+@media (max-width: 700px) {
+  main > header {
+    background-size: cover;
+  }
+  main > header h1 {
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+  }
+  main > header P {
+    width: 80%;
+    font-size: 1.7rem;
+    text-align: center;
+  }
+}
+main .container {
+  margin-top: 800px !important;
+}
+main .section {
+  background-color: #f0f0f0;
+  padding: 20px 0;
+}
+main .section > .content {
+  width: 75%;
+  margin: 0 auto;
+}
+main .section > header {
+  width: 100%;
+  text-align: center;
+}
+main .section > header h2 {
+  font-size: 2.5rem;
+  padding: 40px 0;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+}
+
+#kings > .content > div {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+#kings > .content > div h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  width: 100%;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+}
+#kings > .content > div.right h3 {
+  text-align: right;
+}
+#kings > .content > div .image {
+  width: 30%;
+}
+#kings > .content > div .image img {
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.2470588235);
+}
+#kings > .content > div .text {
+  width: 65%;
+}
+#kings > .content > div .text p {
+  font-size: 1.3rem;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+#kings > .content > div .text p a {
+  text-decoration: none;
+  color: #cb372c;
+  transition: all 0.2s ease-in-out;
+}
+#kings > .content > div .text p a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 700px) {
+  #kings > .content > div {
+    flex-direction: column;
+  }
+  #kings > .content > div .image, #kings > .content > div .text {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  #kings > .content > div h3 {
+    text-align: center !important;
+  }
+}
+
+#rozbicie {
+  padding-bottom: 70px;
+}
+#rozbicie > .content {
+  display: flex;
+  justify-content: space-between;
+}
+#rozbicie > .content p {
+  width: 50%;
+  font-size: 1.3rem;
+  text-align: justify;
+}
+#rozbicie > .content img {
+  width: 40%;
+}
+@media (max-width: 700px) {
+  #rozbicie > .content {
+    flex-direction: column;
+  }
+  #rozbicie > .content p, #rozbicie > .content img {
+    width: 100%;
+  }
+  #rozbicie > .content p {
+    margin-top: 30px;
+  }
+}
+
+#daty {
+  padding-bottom: 60px;
+  font-size: 1.3rem;
+  background-color: #991d14;
+  color: #fff;
+}
+#daty > .content {
+  display: flex;
+}
+#daty > .content ul {
+  width: 50%;
+  line-height: 40px;
+}
+@media (max-width: 700px) {
+  #daty > .content {
+    flex-direction: column;
+  }
+  #daty > .content ul {
+    width: 100%;
+  }
+}
+
+.space {
+  background-image: url("./../imgs/tapeta-oswietlony-zamek-krolewski-na-wawelu.jpg");
+  background-size: 100% auto;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 600px;
+}
+.space.m2 {
+  background-image: url("./../imgs/1000_F_230404477_O1SyyN3UODSeCCeSaHXW5yiZNdn6VSqj.jpg");
+}
+.space.m3 {
+  background-image: url("./../imgs/zamek-ogrodzieniec.jpg");
+}
+
+.footer {
+  width: 100%;
+  background-color: #000;
+  color: #888888;
+  text-align: center;
+  padding: 22px 100px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+}
+.footer a {
+  color: #888888;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer a:hover {
+  color: #cb372c;
+}
+@media (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    height: 120px;
+    padding: 15px 0;
+  }
+  .footer > div:first-child {
+    margin-bottom: 5px;
+  }
+}
